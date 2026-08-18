@@ -1,189 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amaan Restaurant AR Menu</title>
 
-  <title>Amaan Restaurant - AR Menu</title>
+<script type="module"
+src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+</script>
 
-  <script type="module"
-    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
-  </script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f1ea;
-      margin: 0;
-      padding: 20px;
-    }
-
-    .restaurant {
-      max-width: 500px;
-      margin: auto;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 5px;
-    }
-
-    .subtitle {
-      color: #777;
-      margin-bottom: 30px;
-    }
-
-    .food {
-      background: white;
-      margin-bottom: 25px;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding-bottom: 20px;
-    }
-
-    .food > img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .food h2 {
-      margin: 18px 10px 5px;
-    }
-
-    .food p {
-      color: #777;
-      margin: 5px 15px;
-    }
-
-    .food h3 {
-      font-size: 22px;
-      margin: 12px;
-    }
-
-    model-viewer {
-      width: 100%;
-      height: 320px;
-      background: #f5f5f5;
-      border-radius: 15px;
-      margin-top: 15px;
-    }
-
-    .ar-button {
-      background: #111;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 13px 20px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-  </style>
+<style>
+body{
+font-family:Arial;
+background:#f5f1ea;
+margin:0;
+padding:20px;
+}
+.restaurant{
+max-width:500px;
+margin:auto;
+text-align:center;
+}
+.food{
+background:white;
+margin:20px 0;
+padding:15px;
+border-radius:15px;
+}
+.food img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+}
+model-viewer{
+width:100%;
+height:300px;
+background:#eee;
+border-radius:12px;
+}
+.ar-button{
+background:#111;
+color:white;
+border:0;
+border-radius:10px;
+padding:12px 18px;
+font-size:16px;
+}
+</style>
 </head>
 
 <body>
 
 <div class="restaurant">
 
-  <h1>🍴 Amaan Restaurant</h1>
+<h1>🍴 Amaan Restaurant</h1>
+<p>Welcome to our AR Menu</p>
 
-  <p class="subtitle">
-    Welcome to our AR Menu
-  </p>
+<div class="food">
 
+<img src="https://i.ibb.co/213NpYQj/360-F-274990113-ff-VRByg-Lk-LCZAATF9l-Wymz-E6b-It-MVu-H1.jpg">
 
-  <!-- 🍔 BURGER -->
+<h2>🍔 Burger</h2>
+<h3>₹199</h3>
 
-  <div class="food">
+<model-viewer
+src="https://raw.githubusercontent.com/amaan001718/Sig-resturant/main/plaggy_cc0-hamburger-530.glb"
+camera-controls
+auto-rotate
+ar
+ar-modes="webxr scene-viewer quick-look">
 
-    <img
-      src="https://i.ibb.co/213NpYQj/360-F-274990113-ff-VRByg-Lk-LCZAATF9l-Wymz-E6b-It-MVu-H1.jpg"
-      alt="Burger"
-    >
+<button slot="ar-button" class="ar-button">
+📱 View Burger in AR
+</button>
 
-    <h2>🍔 Burger</h2>
-
-    <p>Delicious crispy burger</p>
-
-    <h3>₹199</h3>
-
-    <model-viewer
-      src="https://raw.githubusercontent.com/amaan001718/Sig-resturant/main/plaggy_cc0-hamburger-530.glb"
-      alt="3D Burger"
-      camera-controls
-      auto-rotate
-      ar
-      ar-modes="webxr scene-viewer quick-look"
-      ar-placement="floor"
-      ar-scale="auto"
-      shadow-intensity="1">
-
-      <button slot="ar-button" class="ar-button">
-        📱 View Burger in AR
-      </button>
-
-    </model-viewer>
-
-  </div>
+</model-viewer>
+</div>
 
 
-  <!-- 🍕 PIZZA -->
+<div class="food">
 
-  <div class="food">
+<img src="https://i.postimg.cc/TP7FQMfh/360-F-988111369-Px-Mp15v-F2BC4wh-Qx9K5i-Zf-Afof-CABg-AR.jpg">
 
-    <img
-      src="https://i.postimg.cc/TP7FQMfh/360-F-988111369-Px-Mp15v-F2BC4wh-Qx9K5i-Zf-Afof-CABg-AR.jpg"
-      alt="Pizza"
-    >
+<h2>🍕 Pizza</h2>
+<h3>₹249</h3>
 
-    <h2>🍕 Pizza</h2>
+<model-viewer
+src="https://raw.githubusercontent.com/amaan001718/Sig-resturant/main/ergoninane-food-67.glb"
+camera-controls
+auto-rotate
+ar
+ar-modes="webxr scene-viewer quick-look">
 
-    <p>Fresh cheesy pizza</p>
+<button slot="ar-button" class="ar-button">
+📱 View Pizza in AR
+</button>
 
-    <h3>₹249</h3>
-
-    <model-viewer
-      src="https://raw.githubusercontent.com/amaan001718/Sig-resturant/main/ergoninane-food-67.glb"
-      alt="3D Pizza"
-      camera-controls
-      auto-rotate
-      ar
-      ar-modes="webxr scene-viewer quick-look"
-      ar-placement="floor"
-      ar-scale="auto"
-      shadow-intensity="1">
-
-      <button slot="ar-button" class="ar-button">
-        📱 View Pizza in AR
-      </button>
-
-    </model-viewer>
-
-  </div>
+</model-viewer>
+</div>
 
 
-  <!-- 🍗 CHICKEN LOLLIPOP -->
+<div class="food">
 
-  <div class="food">
+<img src="https://i.postimg.cc/QdMqmBtz/high-angle-shot-delicious-hot-spicy-dish-called-drums-heaven-table-181624-50861.jpg">
 
-    <img
-      src="https://i.postimg.cc/QdMqmBtz/high-angle-shot-delicious-hot-spicy-dish-called-drums-heaven-table-181624-50861.jpg"
-      alt="Chicken Lollipop"
-    >
+<h2>🍗 Chicken Lollipop</h2>
+<h3>₹299</h3>
 
-    <h2>🍗 Chicken Lollipop</h2>
+<model-viewer
+src="https://raw.githubusercontent.com/amaan001718/Sig-resturant/main/quaternius_cc0-chicken-leg-820.glb"
+camera-controls
+auto-rotate
+ar
+ar-modes="webxr scene-viewer quick-look">
 
-    <p>Juicy and delicious chicken lollipop</p>
+<button slot="ar-button" class="ar-button">
+📱 View Chicken in AR
+</button>
 
-    <h3>₹299</h3>
+</model-viewer>
+</div>
 
-    <model-viewer
-      src="https://raw.githubusercontent.com/amaan001718/Sig-resturant/main/quaternius_cc0-chicken-leg-820.glb"
-      alt="3D Chicken Lollipop"
-      camera-controls
-      auto-rotate
-      ar
-      ar-modes="webxr scene
+</div>
+
+</body>
+</html>
